@@ -59,7 +59,7 @@ btn.addEventListener('click', () => {
   }  
   
   //エラーが表示された後の挙動を関数で用意
-  function errorMessage(){
+  function errorMessage() {
 
     //pタグの要素を作成
     const checker = document.createElement('p');
