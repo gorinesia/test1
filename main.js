@@ -16,13 +16,13 @@ btn.addEventListener('click', () => {
   const fizzNumber = document.getElementById('fizz');
 
   //fizzNumのinputに入力された数字から値を取得
-  const fizzes = fizzNumber.value;
+  const fizzNum = fizzNumber.value;
 
   //HTMLの中からIdがbuzzの要素を取得
   const buzzNumber = document.getElementById('buzz');
 
   //BuzzNunのinputに入力された数字から値を取得
-  const buzzes = buzzNumber.value;
+  const buzzNum = buzzNumber.value;
 
 
   //結果情報のベース作成//
@@ -78,7 +78,7 @@ btn.addEventListener('click', () => {
   //整数値が入力されない場合の処理//
 
   //整数以外の値が入力された場合の処理
-  if (isNaN(fizzes && buzzes)) {
+  if (isNaN(fizzNum && buzzNum)) {
 
     //アラートダイアログでエラー文を表示
     alert('文字列が入力されています！');
@@ -92,7 +92,7 @@ btn.addEventListener('click', () => {
   }
 
   //値が何も入力されていない場合の処理
-  if (fizzes == 0 && buzzes == 0) {
+  if (fizzNum == 0 && buzzNum == 0) {
 
     //アラートダイアログでエラー文を表示
     alert('数字が入力されていません！');
@@ -105,7 +105,7 @@ btn.addEventListener('click', () => {
   }
 
   //値が小数である場合の処理
-  if (fizzes.match(/^-?[0-9]+\.[0-9]+$/) && buzzes.match(/^-?[0-9]+\.[0-9]+$/)) {
+  if (fizzNum.match(/^-?[0-9]+\.[0-9]+$/) && buzzNum.match(/^-?[0-9]+\.[0-9]+$/)) {
     
     //アラートダイアログでエラー文を表示
     alert('小数値が入力されています！');
@@ -129,19 +129,19 @@ btn.addEventListener('click', () => {
     let value = '';
 
     //iがfizzes、buzzesの両方の数値の倍数である場合の処理
-    if (i % fizzes === 0 && i % buzzes === 0) {
+    if (i % fizzNum === 0 && i % buzzNum === 0) {
 
       //ブラウザに表示するための文字列と取得した値をバリューとして用意
       value = "FizzBuzz" + " " + i;
 
       //がiがfizzesの倍数である場合の処理
-    } else if (i % fizzes === 0) {
+    } else if (i % fizzNum === 0) {
 
       //ブラウザに表示するための文字列と取得した値をバリューとして用意
       value = "Fizz" + " " + i;
 
       //がiがbuzzesの倍数である場合の処理
-    } else if (i % buzzes === 0) {
+    } else if (i % buzzNum === 0) {
 
       //ブラウザに表示するための文字列と取得した値をバリューとして用意
       value = "Buzz" + " " + i;
