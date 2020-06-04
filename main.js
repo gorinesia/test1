@@ -78,7 +78,7 @@ btn.addEventListener('click', () => {
   //整数値が入力されない場合の処理//
 
   //整数以外の値が入力された場合の処理
-  if (isNaN(fizzNumber && buzzNumber)) {
+  if (isNaN(fizzNumber) || isNaN(buzzNumber)) {
 
     //アラートダイアログでエラー文を表示
     alert('文字列が入力されています！');
@@ -92,7 +92,7 @@ btn.addEventListener('click', () => {
   }
 
   //値が何も入力されていない場合の処理
-  if (fizzNumber == 0 && buzzNumber == 0) {
+  if (fizzNumber == 0 || buzzNumber == 0) {
 
     //アラートダイアログでエラー文を表示
     alert('数字が入力されていません！');
@@ -105,7 +105,7 @@ btn.addEventListener('click', () => {
   }
 
   //値が小数である場合の処理
-  if (fizzNumber.match(/^-?[0-9]+\.[0-9]+$/) && buzzNumber.match(/^-?[0-9]+\.[0-9]+$/)) {
+  if (fizzNumber.match(/^-?[0-9]+\.[0-9]+$/) || buzzNumber.match(/^-?[0-9]+\.[0-9]+$/)) {
     
     //アラートダイアログでエラー文を表示
     alert('小数値が入力されています！');
