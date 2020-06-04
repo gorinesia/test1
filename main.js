@@ -13,16 +13,16 @@ btn.addEventListener('click', () => {
   //入力値の取得//
 
   //HTMLの中からIdがfizzの要素を取得
-  const fizzNumber = document.getElementById('fizz');
+  const elemFizzNumber = document.getElementById('fizz');
 
   //fizzNumのinputに入力された数字から値を取得
-  const fizzNum = fizzNumber.value;
+  const fizzNumber = elemFizzNumber.value;
 
   //HTMLの中からIdがbuzzの要素を取得
-  const buzzNumber = document.getElementById('buzz');
+  const elemBuzzNumber = document.getElementById('buzz');
 
   //BuzzNunのinputに入力された数字から値を取得
-  const buzzNum = buzzNumber.value;
+  const buzzNumber = elemBuzzNumber.value;
 
 
   //結果情報のベース作成//
@@ -49,13 +49,13 @@ btn.addEventListener('click', () => {
   function NumberClear() {
 
     //fizzNumの値を空にする
-    fizzNumber.value = '';
+    elemFizzNumber.value = '';
     
     //buzzNumの値を空にする
-    buzzNumber.value = '';
+    elemBuzzNumber.value = '';
     
     //入力する際に上段部分にあたるfizzBuzzにフォーカスを合わせる
-    fizzNumber.focus();
+    elemFizzNumber.focus();
   }  
   
   //エラーが表示された後の挙動を関数で用意
@@ -78,7 +78,7 @@ btn.addEventListener('click', () => {
   //整数値が入力されない場合の処理//
 
   //整数以外の値が入力された場合の処理
-  if (isNaN(fizzNum && buzzNum)) {
+  if (isNaN(fizzNumber && buzzNumber)) {
 
     //アラートダイアログでエラー文を表示
     alert('文字列が入力されています！');
@@ -92,7 +92,7 @@ btn.addEventListener('click', () => {
   }
 
   //値が何も入力されていない場合の処理
-  if (fizzNum == 0 && buzzNum == 0) {
+  if (fizzNumber == 0 && buzzNumber == 0) {
 
     //アラートダイアログでエラー文を表示
     alert('数字が入力されていません！');
@@ -105,7 +105,7 @@ btn.addEventListener('click', () => {
   }
 
   //値が小数である場合の処理
-  if (fizzNum.match(/^-?[0-9]+\.[0-9]+$/) && buzzNum.match(/^-?[0-9]+\.[0-9]+$/)) {
+  if (fizzNumber.match(/^-?[0-9]+\.[0-9]+$/) && buzzNumber.match(/^-?[0-9]+\.[0-9]+$/)) {
     
     //アラートダイアログでエラー文を表示
     alert('小数値が入力されています！');
@@ -129,19 +129,19 @@ btn.addEventListener('click', () => {
     let value = '';
 
     //iがfizzes、buzzesの両方の数値の倍数である場合の処理
-    if (i % fizzNum === 0 && i % buzzNum === 0) {
+    if (i % fizzNumber === 0 && i % buzzNumber === 0) {
 
       //ブラウザに表示するための文字列と取得した値をバリューとして用意
       value = "FizzBuzz" + " " + i;
 
       //がiがfizzesの倍数である場合の処理
-    } else if (i % fizzNum === 0) {
+    } else if (i % fizzNumber === 0) {
 
       //ブラウザに表示するための文字列と取得した値をバリューとして用意
       value = "Fizz" + " " + i;
 
       //がiがbuzzesの倍数である場合の処理
-    } else if (i % buzzNum === 0) {
+    } else if (i % buzzNumber === 0) {
 
       //ブラウザに表示するための文字列と取得した値をバリューとして用意
       value = "Buzz" + " " + i;
