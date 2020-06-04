@@ -50,14 +50,14 @@ btn.addEventListener('click', () => {
 
     //fizzNumの値を空にする
     elemFizzNumber.value = '';
-    
+
     //buzzNumの値を空にする
     elemBuzzNumber.value = '';
-    
+
     //入力する際に上段部分にあたるfizzBuzzにフォーカスを合わせる
     elemFizzNumber.focus();
-  }  
-  
+  }
+
   //エラーが表示された後の挙動を関数で用意
   function errorMessage() {
 
@@ -73,11 +73,11 @@ btn.addEventListener('click', () => {
     //divタグの子要素としてpタグの要素を追加
     outputArea.appendChild(checker);
   }
-  
 
-  //整数値が入力されない場合の処理//
 
-  //整数以外の値が入力された場合の処理
+  // 整数値が入力されない場合の処理//
+
+  // 整数以外の値が入力された場合の処理
   if (isNaN(fizzNumber) || isNaN(buzzNumber)) {
 
     //アラートダイアログでエラー文を表示
@@ -92,7 +92,7 @@ btn.addEventListener('click', () => {
   }
 
   //値が何も入力されていない場合の処理
-  if (fizzNumber == 0 || buzzNumber == 0) {
+  if ((fizzNumber == 0) || (buzzNumber == 0)) {
 
     //アラートダイアログでエラー文を表示
     alert('数字が入力されていません！');
@@ -106,7 +106,7 @@ btn.addEventListener('click', () => {
 
   //値が小数である場合の処理
   if (fizzNumber.match(/^-?[0-9]+\.[0-9]+$/) || buzzNumber.match(/^-?[0-9]+\.[0-9]+$/)) {
-    
+
     //アラートダイアログでエラー文を表示
     alert('小数値が入力されています！');
 
@@ -122,7 +122,7 @@ btn.addEventListener('click', () => {
 
   //fizzbuzz問題のループ文
 
-  //変数iを定義し、iが100より小さい場合、iに1ずつ足していく処理を実行
+  // 変数iを定義し、iが100より小さい場合、iに1ずつ足していく処理を実行
   for (let i = 1; i < 100; i++) {
 
     //バリューを取得するための変数を定義
